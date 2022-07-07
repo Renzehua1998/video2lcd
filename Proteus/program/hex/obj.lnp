@@ -1,0 +1,5 @@
+"..\hex\STARTUP.obj",
+"..\hex\main.obj",
+"..\hex\SD.obj" 
+TO "..\hex\obj" 
+PRINT("..\list\obj.m51") RAMSIZE(256) 
