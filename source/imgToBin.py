@@ -1,10 +1,10 @@
 '''
-单张图片二值化结果存为二进制文件脚本
+单张图片二值化结果存为二进制文件的脚本
 '''
 
 import cv2
 
-def toBinFile(img): # 转换为二进制文件
+def toBinFile(img): # 转换为二进制文件，扫描方式为数据水平，字节垂直，字节内数据反序（适合我自己的工程）
     height = len(img)
     width = len(img[0])
     with open('../output/output.mmc', 'wb+') as f:
