@@ -57,7 +57,7 @@ def progressBar(percent): # 进度条代码
 # 扫描方式 0-3 四种方式：0 水平扫描；1 垂直扫描；2 数据水平，字节垂直；3 数据垂直，字节水平
 # 输出文件名（默认video）
 def videoToBin(camera, freq=3, transMode='Global', reverse=False, reOrder=False,
-               UDFlip=False, RLFlip=False, scanMode=0, output='video'):
+               DUFlip=False, RLFlip=False, scanMode=0, output='video'):
     times = 0
     # 提取视频的频率，每1帧提取一个
     frame_frequency = freq
@@ -84,7 +84,7 @@ def videoToBin(camera, freq=3, transMode='Global', reverse=False, reOrder=False,
                 if reverse: # 若设置像素反序，此处执行反序代码
                     img = binImgReverse(img)
 
-                if UDFlip: # 若设置上下反转，则执行此代码
+                if DUFlip: # 若设置上下反转，则执行此代码
                     img = cv2.flip(img,0)
 
                 if RLFlip: # 若设置左右反转，则执行此代码
